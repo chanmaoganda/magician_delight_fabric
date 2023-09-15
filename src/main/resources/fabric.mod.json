@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "magician_delight",
+	"version": "${version}",
+	"name": "learning",
+	"description": "This is my fabric mod for fabric learning, come and enjoy!!!",
+	"authors": [
+		"chanmaoganda"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.chanmaoganda.item.Initializer"
+		],
+		"client": [
+			"com.chanmaoganda.ExampleModClient"
+		]
+	},
+	"mixins": [
+		"modid.mixins.json",
+		{
+			"config": "modid.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
