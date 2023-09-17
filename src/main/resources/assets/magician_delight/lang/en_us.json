@@ -1,3 +1,10 @@
 {
-  "item.magician_delight.stone_of_origin" : "Stone Of Origin"
+  "item.magician_delight.originium" : "Originium",
+  "item.magician_delight.raw_originium" : "Raw Originium",
+  "item.magician_delight.originium_block" : "Block Of Originium",
+
+  "block.magician_delight.originium_block" : "Block Of Originium",
+  "block.magician_delight.magic_iron_block" : "Block Of Magic Iron",
+
+  "itemgroup.start_of_origin" : "Start Of Origin"
 }

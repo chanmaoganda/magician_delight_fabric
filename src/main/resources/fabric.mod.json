@@ -15,7 +15,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.chanmaoganda.item.Initializer"
+          "com.chanmaoganda.Initializer"
 		],
 		"client": [
 			"com.chanmaoganda.ExampleModClient"
