@@ -2,9 +2,13 @@
   "item.magician_delight.originium" : "Originium",
   "item.magician_delight.raw_originium" : "Raw Originium",
   "item.magician_delight.originium_block" : "Block Of Originium",
+  "item.magician_delight.originium_sword" : "Originium Sword",
+  "item.magician_delight.originium_pickaxe" : "Originium Pickaxe",
 
   "block.magician_delight.originium_block" : "Block Of Originium",
   "block.magician_delight.magic_iron_block" : "Block Of Magic Iron",
 
-  "itemgroup.start_of_origin" : "Start Of Origin"
+  "itemgroup.material_of_origin" : "Material Of Origin",
+  "itemgroup.tools_in_origin" : "Tools in Origin",
+  "itemgroup.blocks_in_origin" : "Blocks in Origin"
 }
