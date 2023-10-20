@@ -8,7 +8,7 @@ public class ModGroupList {
             RegisterUtils.registerItemGroup("material_of_origin", ModItemList.ORIGINIUM, ModItemList.ItemList);
 
     public static final net.minecraft.item.ItemGroup ORIGINIUM_TOOLS_GROUP =
-            RegisterUtils.registerItemGroup("tools_in_origin", ModToolList.ORIGINIUM_SWORD, ModToolList.ToolList);
+            RegisterUtils.registerToolGroup("tools_in_origin", ModToolList.ORIGINIUM_SWORD, ModToolList.ToolList);
     public static final net.minecraft.item.ItemGroup ORIGINIUM_BLOCKS_GROUP =
             RegisterUtils.registerBlockGroup("blocks_in_origin", ModBlockList.ORIGINIUM_BLOCK, ModBlockList.BlockList);
     public static final net.minecraft.item.ItemGroup ORIGINIUM_ARMORS_GROUP =

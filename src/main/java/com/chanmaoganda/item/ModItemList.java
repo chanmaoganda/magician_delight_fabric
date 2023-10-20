@@ -11,6 +11,7 @@ public class ModItemList {
     public static final List<Item> ItemList = new ArrayList<>();
     public static final Item ORIGINIUM = RegisterUtils.registerItems("originium");
     public static final Item RAW_ORIGINIUM = RegisterUtils.registerItems("raw_originium");
+    public static final Item MAGIC_IRON = RegisterUtils.registerItems("magic_iron");
        /**
      * initialize this class to make sure all items are registered in the right order
      */

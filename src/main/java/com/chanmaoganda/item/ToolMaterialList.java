@@ -10,7 +10,6 @@ import java.util.function.Supplier;
 public enum ToolMaterialList implements ToolMaterial {
     ORIGINIUM(MiningLevels.DIAMOND, 1024, 7.5f, 0.0f, 12, ()-> Ingredient.ofItems(ModItemList.ORIGINIUM));
 
-
     private final int miningLevel;
     private final int itemDurability;
     private final float miningSpeed;
@@ -28,31 +27,31 @@ public enum ToolMaterialList implements ToolMaterial {
 
     @Override
     public int getDurability() {
-        return 0;
+        return this.itemDurability;
     }
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 0;
+        return this.miningSpeed;
     }
 
     @Override
     public float getAttackDamage() {
-        return 0;
+        return this.attackDamage;
     }
 
     @Override
     public int getMiningLevel() {
-        return 0;
+        return this.miningLevel;
     }
 
     @Override
     public int getEnchantability() {
-        return 0;
+        return this.enchantability;
     }
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return this.repairIngredient.get();
     }
 }
