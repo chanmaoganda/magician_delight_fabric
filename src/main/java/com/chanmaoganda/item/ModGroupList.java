@@ -11,14 +11,9 @@ public class ModGroupList {
             RegisterUtils.registerItemGroup("tools_in_origin", ModToolList.ORIGINIUM_SWORD, ModToolList.ToolList);
     public static final net.minecraft.item.ItemGroup ORIGINIUM_BLOCKS_GROUP =
             RegisterUtils.registerBlockGroup("blocks_in_origin", ModBlockList.ORIGINIUM_BLOCK, ModBlockList.BlockList);
-//            Registry.register(Registries.ITEM_GROUP, new Identifier(Initializer.MOD_ID,"blocks_in_origin"),
-//            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.blocks_in_origin"))
-//                    .icon(()-> new ItemStack(ModBlockLists.ORIGINIUM_BLOCK))
-//                    .entries((displayContext, entries) -> {
-//                        entries.add(ModBlockLists.ORIGINIUM_BLOCK);
-//                        entries.add(ModBlockLists.MAGIC_IRON_BLOCK);
-//
-//                    }).build());
+    public static final net.minecraft.item.ItemGroup ORIGINIUM_ARMORS_GROUP =
+            RegisterUtils.registerItemGroup("armors_in_origin", ModArmorList.ORIGINIUM_CHESTPLATE, ModArmorList.ArmorList);
+
 
     public static void registerGroups(){
     }

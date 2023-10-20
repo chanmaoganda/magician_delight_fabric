@@ -12,9 +12,9 @@ public class ModBlockList {
     public static final List<Block> BlockList = new ArrayList<>();
 
     public static final Block ORIGINIUM_BLOCK = RegisterUtils.registerBlocks(
-            new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)),"originium_block");
+            "originium_block", new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
     public static final Block MAGIC_IRON_BLOCK = RegisterUtils.registerBlocks(
-            new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)),"magic_iron_block");
+            "magic_iron_block", new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_BLOCK)));
 
 
     public static void RegisterHandler(){

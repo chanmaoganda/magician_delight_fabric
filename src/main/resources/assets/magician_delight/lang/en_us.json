@@ -1,14 +1,25 @@
 {
   "item.magician_delight.originium" : "Originium",
   "item.magician_delight.raw_originium" : "Raw Originium",
-  "item.magician_delight.originium_block" : "Block Of Originium",
+
   "item.magician_delight.originium_sword" : "Originium Sword",
+  "item.magician_delight.originium_shovel" : "Originium Shovel",
   "item.magician_delight.originium_pickaxe" : "Originium Pickaxe",
+  "item.magician_delight.originium_axe" : "Originium Axe",
+  "item.magician_delight.originium_hoe" : "Originium Hoe",
+
+  "item.magician_delight.originium_helmet" : "Originium Helmet",
+  "item.magician_delight.originium_chestplate" : "Originium Chestplate",
+  "item.magician_delight.originium_leggings" : "Originium Leggings",
+  "item.magician_delight.originium_boots" : "Originium Boots",
+
+
 
   "block.magician_delight.originium_block" : "Block Of Originium",
   "block.magician_delight.magic_iron_block" : "Block Of Magic Iron",
 
   "itemgroup.material_of_origin" : "Material Of Origin",
   "itemgroup.tools_in_origin" : "Tools in Origin",
-  "itemgroup.blocks_in_origin" : "Blocks in Origin"
+  "itemgroup.blocks_in_origin" : "Blocks in Origin",
+  "itemgroup.armors_in_origin" : "Armors in Origin"
 }

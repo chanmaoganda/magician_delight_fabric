@@ -2,7 +2,8 @@ package com.chanmaoganda.utils;
 
 import com.chanmaoganda.Initializer;
 import com.chanmaoganda.block.ModBlockList;
-import com.chanmaoganda.item.CustomToolMaterial;
+import com.chanmaoganda.item.ArmorMaterialList;
+import com.chanmaoganda.item.ModArmorList;
 import com.chanmaoganda.item.ModItemList;
 import com.chanmaoganda.item.ModToolList;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -45,38 +46,49 @@ public class RegisterUtils {
         ModItemList.ItemList.add(item);
         return Registry.register(Registries.ITEM, new Identifier(Initializer.MOD_ID, name), item);
     }
-
-
     /**
      * auto-detect the kind of tools, classify it to different varieties.
      * name must contain one of the names of the tools
      * */
-    public static Item registerToolItems(String name, float Attackdamage, float Attackspeed) {
+    public static Item registerToolItems(String name, ToolMaterial material,float Attackdamage, float Attackspeed) {
         //auto-detect the kind of tools
-        ToolClassification classification = PatternMatcher.tool_classify(name);
-        Item registering = switchToolFields(classification,Attackdamage, Attackspeed);
-        ModToolList.ToolList.add(registering);
-        return Registry.register(Registries.ITEM, new Identifier(Initializer.MOD_ID, name), registering);
+        ToolClassification classification = PatternMatcher.toolClassify(name);
+        Item tool = switchToolFields(material, classification,Attackdamage, Attackspeed);
+        ModToolList.ToolList.add(tool);
+        return Registry.register(Registries.ITEM, new Identifier(Initializer.MOD_ID, name), tool);
     }
 
-//    public static Item registerArmorItems(String name){
-//
-//    }
+    public static Item registerArmorItems(String name, ArmorMaterial material){
+        ArmorClassification classification = PatternMatcher.armorClassify(name);
+        Item armor = switchArmorFields(classification);
+        ModArmorList.ArmorList.add(armor);
+        return Registry.register(Registries.ITEM, new Identifier(Initializer.MOD_ID, name), armor);
+    }
 
-    public static Block registerBlocks(Block block, String name){
+    public static Block registerBlocks(String name, Block block){
         Registry.register(Registries.ITEM, new Identifier(Initializer.MOD_ID, name), new BlockItem(block, new FabricItemSettings()));
         ModBlockList.BlockList.add(block);
         return Registry.register(Registries.BLOCK, new Identifier(Initializer.MOD_ID, name), block);
     }
 
-    private static Item switchToolFields(ToolClassification classification, float Attackdamage, float Attackspeed){
+    private static Item switchToolFields(ToolMaterial material, ToolClassification classification, float Attackdamage, float Attackspeed){
         return
             switch (classification) {
-                case AXE -> new AxeItem(CustomToolMaterial.INSTANCE, Attackdamage, Attackspeed, new Item.Settings());
-                case SWORD -> new SwordItem(CustomToolMaterial.INSTANCE, (int) Attackdamage, Attackspeed, new Item.Settings());
-                case PICKAXE -> new PickaxeItem(CustomToolMaterial.INSTANCE, (int) Attackdamage, Attackspeed, new Item.Settings());
-                case SHOVEL -> new ShovelItem(CustomToolMaterial.INSTANCE, Attackdamage, Attackspeed, new Item.Settings());
-                case HOE -> new HoeItem(CustomToolMaterial.INSTANCE, (int) Attackdamage, Attackspeed, new Item.Settings());
+                case AXE -> new AxeItem(material, Attackdamage, Attackspeed, new Item.Settings());
+                case SWORD -> new SwordItem(material, (int) Attackdamage, Attackspeed, new Item.Settings());
+                case PICKAXE -> new PickaxeItem(material, (int) Attackdamage, Attackspeed, new Item.Settings());
+                case SHOVEL -> new ShovelItem(material, Attackdamage, Attackspeed, new Item.Settings());
+                case HOE -> new HoeItem(material, (int) Attackdamage, Attackspeed, new Item.Settings());
+            };
+    }
+
+    private static Item switchArmorFields(ArmorClassification classification){
+        return
+            switch (classification) {
+                case HELMET -> new ArmorItem(ArmorMaterialList.INSTANCE, ArmorItem.Type.HELMET, new Item.Settings());
+                case CHESTPLATE -> new ArmorItem(ArmorMaterialList.INSTANCE, ArmorItem.Type.CHESTPLATE, new Item.Settings());
+                case LEGGINGS -> new ArmorItem(ArmorMaterialList.INSTANCE, ArmorItem.Type.LEGGINGS, new Item.Settings());
+                case BOOTS -> new ArmorItem(ArmorMaterialList.INSTANCE, ArmorItem.Type.BOOTS, new Item.Settings());
             };
     }
 
